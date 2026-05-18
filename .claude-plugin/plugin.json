@@ -1,0 +1,10 @@
+{
+  "name": "dungpp-assistant",
+  "version": "0.8.0",
+  "description": "Bộ trợ lý cá nhân cho Phạm Phú Dũng (Android Developer @ iKame Global): viết theo phong cách iKame, hỏi đáp về công ty, hồ sơ cá nhân, và template báo cáo tuần / IDP.",
+  "author": {
+    "name": "Phạm Phú Dũng",
+    "email": "dungpp@ikameglobal.com"
+  },
+  "keywords": ["ikame", "android", "kotlin", "personal-assistant", "vietnamese"]
+}
