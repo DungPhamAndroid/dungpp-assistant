@@ -1,7 +1,7 @@
 # Weekly Reports Summary — H1 2026
 
 > Tổng hợp các báo cáo tuần của Dũng từ iGoal. Nguồn: <https://igoal.ikameglobal.com/eks/personal?reportId=f45da75b-b234-4e8f-a349-61234f2231dc>
-> Cập nhật: 5/2026. 8/16 báo cáo fetch được, 8 báo cáo cũ (giữa Feb - đầu Mar) iGoal SPA chưa cho re-fetch.
+> Cập nhật: 24/5/2026 (W4/5). 12/20 báo cáo có content đầy đủ; 8 báo cáo cũ (giữa Feb - đầu Mar, một số tuần lẻ tháng 4) iGoal SPA chưa cho re-fetch.
 
 ## Timeline & key achievements
 
@@ -260,6 +260,63 @@ TRY:
 
 → Đề xuất: 1 buổi 30 phút trong tuần này hoặc đầu tuần sau, có slide + demo + repo. Format có thể: live demo + sharing chữa các edge case.
 
+### Tháng 5 — Báo cáo W4 (24/05/2026) — ⭐ Project transition + IDP closed
+**Sản phẩm**: AI Learn (Kick-off & R&D) + AI Chat IAP (Update 1.4.7) — tag E1 KS1, E3 KS2
+
+**Kết quả (IKAME WHAT)**:
+- **AI Learn (Pre-phase 1 R&D)**: Bám tiến độ phase Research (kéo đến T4 tuần sau). Đã xong: đọc document dự án, trải nghiệm app đối thủ, tham gia Kick-off (nắm thị phần, mục tiêu, timeline, next action). Khởi động tiếp cận **Reverse Engineering** app đối thủ + setup demo **Lib Sync** & **KMP base**.
+- **AI Chat IAP (1.4.7)**: Rà soát luồng payment, ship bản update 1.4.7 (task phát sinh) phục vụ A/B test luồng payment start app.
+- **IDP cá nhân**: ⭐ **Hoàn thiện IDP 2026** — chốt lộ trình close 17 gap behaviors. **Đưa E3 KS2 từ 0% sang on-track** (deliverable trực tiếp lên dashboard EKS).
+
+**Cách làm (IKAME HOW) — Preparation discipline + Bridge mindset**:
+
+Chủ động trước Kick-off & Retro:
+- Đọc kỹ document AI Learn + trải nghiệm app đối thủ → vào Kick-off đặt câu hỏi đúng thay vì nghe brief thụ động.
+- Chuẩn bị data trước cho Retro (AI-Home & Chat) → giúp team đào sâu vào action thực tế, rút kinh nghiệm cho dự án sau.
+
+Research approach có cấu trúc:
+- Break nhỏ task research AI Learn (KMP, Lib Sync, Reverse Engineering) trên Asana → có định hướng rõ ràng trước khi đào sâu, tránh ngợp.
+
+Ownership trong task phát sinh:
+- Update Chat AI IAP 1.4.7 phát sinh giữa tuần → OT để update + self-test cẩn thận → đảm bảo A/B test pay rate start app chạy đúng.
+
+TRY & kết quả:
+- Try 1 (Bước đầu): Phương pháp Reverse Engineering + setup demo Lib Sync → đang ở giai đoạn làm quen nhưng có cơ sở để tuần tới đào sâu hơn.
+- Try 2 (Worked): Habit chuẩn bị data trước họp → chất lượng đóng góp Kick-off + Retro tăng rõ.
+
+**Level up (IKAME LEVEL UP)**:
+- **Tech foundation mới** (đang khởi động): KMP & Lib Sync — đọc tài liệu, hiểu cấu trúc, setup môi trường demo.
+- **Reverse Engineering Android**: bắt đầu tìm hiểu phương pháp bóc tách ứng dụng → tiền đề rèn tư duy phân tích hệ thống.
+- **EQ framework**: ⭐ Học và áp dụng ngay framework kiểm soát cảm xúc — giải quyết thành công 1 vấn đề bức xúc thực tế. Sẽ rèn thành phản xạ.
+- **IDP**: Tự lên bảng đánh giá gap → nhận bảng gợi ý hành động từ ViệtLD → cá nhân hóa hành động cụ thể → cập nhật iGrow.
+- **Vấn đề khó**: Dự án AI Learn nhiều công nghệ mới cùng lúc → chủ động break task trên Asana, vạch lộ trình research từng bước (KMP, Lib Sync, Reverse Engineering) để có hướng đi mạch lạc cho phase coding.
+
+**Tồn đọng & rủi ro**:
+- Research core (KMP base, Lib Sync, Reverse Engineering) đều là công nghệ mới vừa bắt đầu — đòi hỏi nhiều thời gian đào sâu tuần sau, cần đảm bảo tiến độ để chốt **technical approach** kịp phase coding.
+- Hướng xử lý: tuần tới dồn lực, chủ động báo cáo tiến độ sớm với TL để cùng đánh giá rủi ro + chốt approach kịp.
+
+**Cần hỗ trợ**:
+- **TechLead**: nhờ TL sát sao hơn tuần tới, hỗ trợ định hướng nhanh khi có block trong quá trình đào sâu Lib Sync/KMP, cùng chốt technical approach.
+- Manager: N/A
+
+**⭐ IDP / Gap behaviors evidence (auto-tag)**:
+- **#3 Continuous Dev 4.1** (IDP dài hạn) — ✓ **Closed**: Hoàn thiện IDP 2026 trên iGrow, cá nhân hóa hành động cho 17 gap behaviors.
+- **#4 Continuous Dev 4.2** (Tìm cơ hội học) — KMP + Lib Sync + Reverse Engineering + EQ framework cùng lúc trong 1 tuần.
+- **#6 Continuous Dev 4.6** (Đúc kết) — Break task research trên Asana = self-organize knowledge acquisition path.
+- **#12 Ownership 4.6** (Kiểm soát cảm xúc) — Học và áp dụng EQ framework, xử lý thành công 1 vấn đề bức xúc thực tế.
+- **#16 Tech R&D 4.7** (Cải tiến quy trình) — Habit chuẩn bị data trước Kick-off & Retro.
+- **#15 Tech R&D 4.6** (Quản lý rủi ro) — Plan research có cấu trúc để giảm rủi ro technical approach miss.
+
+**Self-rating**: Làm tốt
+**Lý do**: Bám chất lượng sản phẩm — xử lý gọn task phát sinh Chat IAP 1.4.7 (E1 KS1) + chốt IDP 2026 (đưa E3 KS2 on-track). Với AI Learn (dự án mới), chủ động cao: chuẩn bị kỹ Kick-off, lên plan break task chi tiết, bắt tay tiếp cận KMP/Lib Sync ngay để tạo đà tuần sau. Đồng thời tiếp tục đóng góp tích cực quy trình team qua Retro.
+
+⭐ **Insight**: Tuần này là **bước chuyển dự án** từ AI Chat IAP sang AI Learn (Pre-phase 1 R&D). Tech context mới (KMP/CMP/Reverse Engineering) ăn khớp **đúng lộ trình IDP dài hạn của Dũng** (KMP → CMP → SwiftUI). Đây là cơ hội vàng để evidence hóa Tech R&D 4.3 (tích hợp nhiều công nghệ) + Continuous Dev 4.2 (học cái mới) một cách tự nhiên thay vì phải "kiếm" evidence ngoài project.
+
+🎯 **Quan trọng cho Mid-year Checkpoint 6/2026**: Tuần W4/5 là **báo cáo cuối cùng có thể tính vào period đánh giá nửa năm đầu** (Mid-year window là 6/2026). Đề xuất:
+1. Đầu tuần W5/5: dồn lực ship technical approach AI Learn (KMP + Lib Sync demo) → có deliverable cụ thể cho self-evaluation.
+2. Trước khi vào Mid-year, **chốt với DM bản IDP 2026 đã hoàn thiện** → E3 KS2 có evidence trực tiếp.
+3. Buổi tech sharing Asana automation (action item từ W3/5 Manager) — nếu ship được trước Mid-year → đóng luôn E2 KS2 (đang 0%).
+
 ## Patterns observed across H1
 
 ### Productivity & technical
@@ -279,21 +336,21 @@ TRY:
 - Manager: thường cao hơn — 4⭐ là chuẩn, có 1 lần 5⭐ Xuất sắc (W1 tháng 4), W3 tháng 5 nhận 4⭐ "Xuất sắc" + "tư duy vượt scope của một Dev"
 - → Dũng đang tự đánh giá khiêm tốn so với evidence thực tế. Có thể tự tin hơn ở promotion review.
 
-### Manager direct action items (đang OPEN, cần follow up)
-1. **W1/3 — "Đưa ra các UT trong IDP"**: Đến giờ chưa thấy follow up trong các báo cáo sau. Cần clarify với Manager format UT.
-2. **W2/5 — "Chia sẻ Custom AI Skill cho nhóm Dev"**: Đến giờ chưa thấy buổi sharing diễn ra.
-3. **W3/5 — "Chia sẻ Asana automation cho anh em Dev trong tổ chức"**: Mới nhất, cần action trong 1-2 tuần tới.
+### Manager direct action items (status update sau W4/5)
+1. **W1/3 — "Đưa ra các UT trong IDP"**: ✓ **PARTIALLY CLOSED** — IDP 2026 đã hoàn thiện trên iGrow (W4/5), có hành động cụ thể cho 17 gap behaviors. Còn cần chốt với DM bản UT/use cases tương ứng.
+2. **W2/5 — "Chia sẻ Custom AI Skill cho nhóm Dev"**: Vẫn OPEN, chưa thấy buổi sharing diễn ra.
+3. **W3/5 — "Chia sẻ Asana automation cho anh em Dev trong tổ chức"**: Vẫn OPEN, cần action trong 1-2 tuần tới (trước Mid-year Checkpoint).
 
-→ 3 items này đều liên quan đến **Continuous Dev sharing** — đang là gap lớn (29% L4). Một buổi tech sharing có thể cover 2-3 items cùng lúc (AI Skill + Asana automation + share IDP UT framework).
+→ 2 items 2+3 đều liên quan đến **Continuous Dev sharing** — đang là gap lớn (29% L4). Một buổi tech sharing có thể cover cả 2 (AI Skill + Asana automation). **Ưu tiên ship trước 6/2026 để có evidence cho Mid-year Checkpoint.**
 
 ## Mapping vào EKS H1 + 17 gap behaviors
 
 ### EKS H1 (xem `eks-h1-2026.md`)
-- **E1 KS1 (Quality submit phase)** — 60% — Evidence rất mạnh từ AI Home + AI Chat IAP các tuần
+- **E1 KS1 (Quality submit phase)** — 60% — Evidence rất mạnh từ AI Home + AI Chat IAP các tuần; W4/5 thêm Chat IAP 1.4.7 phục vụ A/B test + bắt đầu AI Learn R&D
 - **E2 KS1 (Mentor Hiếu PIC)** — 100% ✓ — Evidence rất rõ từ W4/3 đến W2/4
-- **E2 KS2 (Seminar quality)** — 0% — Đề xuất: chia sẻ về Custom AI Skill (W2/5 manager đã gợi ý)
+- **E2 KS2 (Seminar quality)** — 0% — Đề xuất: chia sẻ về Custom AI Skill + Asana automation (W2/5, W3/5 manager đã gợi ý). **Ship trước Mid-year 6/2026**.
 - **E3 KS1 (iGoal compliance)** — 60% — Đang on-track
-- **E3 KS2 (IDP 100%)** — 0% trên dashboard, nhưng evidence thực tế đã chạm nhiều gap behaviors (xem dưới)
+- **E3 KS2 (IDP 100%)** — ⭐ **W4/5: 0% → on-track** sau khi Dũng hoàn thiện IDP 2026 trên iGrow với 17 gap behaviors + hành động cụ thể
 - **E3 KS3 (Quy trình team)** — 60% — Đã hỗ trợ Manager rà soát Asana toàn team
 
 ### Evidence cho 17 gap behaviors (đã captured)
@@ -302,10 +359,10 @@ TRY:
 |---|---|---|
 | 1 | Innovation 4.6 (Dẫn dắt cải tiến) | Sankey bug detection + thuyết phục team fix dù ban đầu đánh giá nhỏ (W1/3); Cải tiến quy trình QA scope (W4/3); Module IAP Remote Config reusable (W4/4); AI workflow + Custom AI Skill (W4/4, W2/5); **Asana automation bot** (W3/5) |
 | 2 | Innovation 4.9 (Phán đoán phản ứng team) | Thuyết phục PM + dev fix bug ban đầu họ thấy nhỏ (W1/3); Trao quyền Hiếu PIC (W1/4, W2/4); Điều phối nguồn lực khi Hiếu nghỉ phép (W3/3) |
-| 3 | Continuous Dev 4.1 (IDP dài hạn) | (Cần evidence: chốt IDP với DM) |
-| 4 | Continuous Dev 4.2 (Chia sẻ cơ hội học) | (Cần evidence: 2 buổi tech sharing/quý) |
+| 3 | Continuous Dev 4.1 (IDP dài hạn) | ⭐ **W4/5: Hoàn thiện IDP 2026 trên iGrow** — cá nhân hóa hành động cho 17 gap behaviors sau khi nhận gợi ý từ ViệtLD. E3 KS2 từ 0% → on-track. Còn cần chốt UT với DM (action từ W1/3). |
+| 4 | Continuous Dev 4.2 (Chia sẻ cơ hội học) | **W4/5: Bắt đầu KMP + Lib Sync + Reverse Engineering + EQ framework** đồng thời — tiếp cận có cấu trúc qua break task Asana. (Còn thiếu: 2 buổi tech sharing/quý) |
 | 5 | Continuous Dev 4.3 (Mentor Hiếu, review < 30p) | ⭐ Evidence rất mạnh: 1:1 đều đặn, Hiếu lên PIC độc lập (W4/3 → W2/4); **Review code Hiếu sâu, bắt lỗi trước QA, tránh re-open** (W3/5) |
-| 6 | Continuous Dev 4.6 (Đúc kết hệ thống) | Module IAP Remote Config + AI Skill có thể đóng gói thành tài liệu |
+| 6 | Continuous Dev 4.6 (Đúc kết hệ thống) | Module IAP Remote Config + AI Skill có thể đóng gói thành tài liệu; **W4/5: Break task research AI Learn trên Asana** = tự tổ chức knowledge acquisition path |
 | 7 | Continuous Dev 4.7 (Coach/Mentor) | Mentor Hiếu chi tiết về break task, estimate, giao tiếp PM (W1/4) |
 | 8 | Ownership 4.1 (Mục tiêu dài hạn OKRs) | iGoal 60% on-track |
 | 9 | Ownership 4.2 (Quản lý nhiều mục tiêu) | Plan + chia task + estimate cho nhiều dev (W3/3); Điều phối khi Hiếu nghỉ phép (W3/3); AI Home + AI Chat IAP song song, push 4 dev (W4/3); **Multi-role coverage Dev+CMS+API test** (W3/5) |
