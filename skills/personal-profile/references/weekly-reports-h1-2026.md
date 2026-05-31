@@ -310,12 +310,80 @@ TRY & kết quả:
 **Self-rating**: Làm tốt
 **Lý do**: Bám chất lượng sản phẩm — xử lý gọn task phát sinh Chat IAP 1.4.7 (E1 KS1) + chốt IDP 2026 (đưa E3 KS2 on-track). Với AI Learn (dự án mới), chủ động cao: chuẩn bị kỹ Kick-off, lên plan break task chi tiết, bắt tay tiếp cận KMP/Lib Sync ngay để tạo đà tuần sau. Đồng thời tiếp tục đóng góp tích cực quy trình team qua Retro.
 
+**Manager feedback (Trần Đạt, ⭐3 sao — Làm tốt)**:
+> Okie Dũng, dựa theo quan sát và báo cáo tuần này thì anh đồng ý với mức đánh giá 3 Sao (Làm tốt) của em nhé. Bản báo cáo tuần này của em viết rất clear, k lẽ lại mang đi làm mẫu tiếp :D
+>
+> - **Trách nhiệm lớn**: Hoàn thành tốt task phát sinh ở Chat AI.
+> - **Tư duy chuẩn bị & Ownership**: Lên kế hoạch rõ ràng và tinh thần owner thể hiện rất rõ trong AI Learn.
+> - **Chủ động level up**: IDP được chốt bài bản, thể hiện quyết tâm.
+> - **EQ thực chiến**: Học xong áp dụng ngay vào xử lý tình huống thực tế → đỉnh :D
+>
+> "Tuần này làm việc rất chuyên nghiệp và level up được đầy đủ kiến thức. Tiếp tục giữ vững phong độ này cho tuần tới em nhé!"
+
 ⭐ **Insight**: Tuần này là **bước chuyển dự án** từ AI Chat IAP sang AI Learn (Pre-phase 1 R&D). Tech context mới (KMP/CMP/Reverse Engineering) ăn khớp **đúng lộ trình IDP dài hạn của Dũng** (KMP → CMP → SwiftUI). Đây là cơ hội vàng để evidence hóa Tech R&D 4.3 (tích hợp nhiều công nghệ) + Continuous Dev 4.2 (học cái mới) một cách tự nhiên thay vì phải "kiếm" evidence ngoài project.
 
 🎯 **Quan trọng cho Mid-year Checkpoint 6/2026**: Tuần W4/5 là **báo cáo cuối cùng có thể tính vào period đánh giá nửa năm đầu** (Mid-year window là 6/2026). Đề xuất:
 1. Đầu tuần W5/5: dồn lực ship technical approach AI Learn (KMP + Lib Sync demo) → có deliverable cụ thể cho self-evaluation.
 2. Trước khi vào Mid-year, **chốt với DM bản IDP 2026 đã hoàn thiện** → E3 KS2 có evidence trực tiếp.
 3. Buổi tech sharing Asana automation (action item từ W3/5 Manager) — nếu ship được trước Mid-year → đóng luôn E2 KS2 (đang 0%).
+
+### Tháng 5 W5 / Tháng 6 W1 (31/05/2026) — ⭐ Phase 1 AI Learn shipped in 1 week
+**Sản phẩm**: AI Learn (Phase 1 — Setup + Core Build) — tag E1 KS1, E2 KS1
+
+**Kết quả (IKAME WHAT)**:
+- **Project setup & shell**: Tạo project base + apply Style Guide + Bottom Navigation (integrated vào shell app) → codebase sẵn sàng cho team vào code ngay.
+- **Core modules shipped/demo trong 1 tuần**:
+  - Permission Core — built xong (runtime permission chuẩn cho các flow cần camera/mic).
+  - Local Speech-to-text — built + demo chạy được.
+  - Video Player — built + demo chạy được.
+  - Camera Preview — built + demo chạy được.
+  - Lib Sync — research + hỗ trợ Hiếu demo (phối hợp team AI).
+- → **E1 KS1**: Phase 1 setup + core đúng kế hoạch sau 1 tuần vào coding, tận dụng research package W21.
+- Tham gia brainstorming AI Learn — đóng góp input technical vào hướng đi sản phẩm.
+
+**Cách làm (IKAME HOW) — Cross-team drive + Strategic delegation**:
+
+Chủ động unblock team:
+- Làm việc với TL setup project ngay từ đầu tuần → team vào code được ngay, không bị "chờ TL set base".
+
+Cross-team với team AI (level up từ W21):
+- W21: chuẩn bị trước họp. W22: trực tiếp drive quyết định công nghệ Lib Sync — phân tích độ khả thi, chi phí, thời gian phản hồi, chốt cách giao tiếp Client - BE - AI với TL + team AI.
+
+Mentor Hiếu trong context dự án mới:
+- Hỗ trợ Hiếu demo Lib Sync, kết nối Hiếu với team AI để Hiếu không bị block và có deliverable rõ ràng.
+
+TRY & Kết quả:
+- Try 1 (Worked): **Modular Architecture** — build từng core feature thành module độc lập → code gọn, chia tách trách nhiệm rõ, dễ maintain.
+- Try 2 (Worked): **Chốt tech cross-team** — phối hợp team AI chốt Lib Sync → demo không bị treo do thiếu data thật.
+- Try 3 (Worked): **Strategic delegation** — ban đầu tự research Lib Sync, nhưng sau khi đánh giá thấy hướng tiếp cận của Hiếu hiệu quả hơn → delegate cho Hiếu + lùi về hỗ trợ. Kết quả: khích lệ nhân sự mới + giải phóng thời gian để hoàn thiện 4 core module còn lại. Phase 1 đầy đủ output, Hiếu có deliverable rõ.
+
+**Level up (IKAME LEVEL UP)**:
+- **Local Speech-to-text Android**: nắm API + trade-off độ chính xác / latency qua build thực tế.
+- **Camera Preview pipeline**: hiểu life-cycle camera → chuẩn bị cho feature record/scan của AI Learn.
+- **Video Player integration**: chọn lib + tích hợp + demo → có baseline so sánh khi scale lên feature thật.
+- **Lib Sync deep dive**: từ research W21 → demo thực tế (support Hiếu) → hiểu sâu hơn cách lib hoạt động trong context AI Learn.
+- **Điều làm tốt hơn**: W21 chốt research (input) → W22 chuyển hoá thành 4 module/demo chạy được (output) trong 1 tuần. Tốc độ research → ship nhanh nhờ chuẩn bị từ W21.
+- **Vấn đề khó**: Phase 1 cần ship nhiều core module trong khi Hiếu mới vào dự án. Cách xử lý: tự pick các module nặng (Permission Core, Speech-to-text, Camera, Video Player), hỗ trợ Hiếu demo Lib Sync → phase 1 không trượt, Hiếu có deliverable rõ.
+
+**Tồn đọng & rủi ro**:
+- Các module mới ở mức demo, chưa hardening (edge case, low-end device, error handling chuẩn).
+- Hướng xử lý: W23 dành 1–2 ngày hardening core modules (Permission Core + Camera) + viết test trước khi build feature business lên trên.
+
+**Cần hỗ trợ**: TL: N/A. Manager: N/A.
+
+**⭐ IDP / Gap behaviors evidence (auto-tag)**:
+- **#1 Innovation 4.6** (Cải tiến kỹ thuật) — Permission Core tách thành module dùng chung từ phase 1 → đề xuất kỹ thuật áp vào dự án thật. Có thể propose cho các sản phẩm khác.
+- **#5 Continuous Dev 4.3** (Cố vấn / Mentor) — Hỗ trợ Hiếu demo Lib Sync, kết nối Hiếu với team AI → mentor trực tiếp trong context dự án mới.
+- **#9 Ownership 4.2** (Quản lý nhiều mục tiêu) — Cùng tuần: 5 module + hỗ trợ Hiếu + brainstorming + cross-team AI mà không drop ball.
+- **#10 Ownership 4.3** (Tư vấn đồng nghiệp) — Support Hiếu setup + demo Lib Sync, kết nối với team AI.
+- **#15 Tech R&D 4.6** (Rủi ro & bảo mật) — Permission Core làm chuẩn từ đầu → giảm rủi ro bảo mật khi feature dùng camera/mic vào sau.
+- **#16 Tech R&D 4.7** (Cải tiến quy trình) — Permission Core dạng module dùng chung, có thể propose áp cho các sản phẩm khác trong BU.
+
+**Self-rating**: Làm tốt
+**Lý do**: Ship setup project + Style Guide + BottomNav + 4 core module/demo (Permission, Speech-to-text, Video Player, Camera Preview) đúng cam kết phase 1 (E1 KS1), đồng thời drive quyết định công nghệ Lib Sync cross-team với TL/AI và mentor Hiếu demo Lib Sync (E2 KS1) — vượt scope dev thuần trong 1 tuần.
+
+⭐ **Insight**: Tuần này là **bước chuyển từ Research → Execution** rõ nét nhất — W21 research đầy đủ nên W22 ship được 5 deliverables trong 1 tuần. Pattern "chuẩn bị kỹ → execute nhanh" này là evidence mạnh cho **Tech R&D 4.3 (tích hợp nhiều công nghệ)** + **Ownership 4.2 (multi-goal management)**. Strategic delegation cho Hiếu cũng đang tiến sát **Continuous Dev 4.7 (Coach/Mentor)**.
+
 
 ## Patterns observed across H1
 
