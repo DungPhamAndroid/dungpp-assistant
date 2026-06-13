@@ -385,11 +385,11 @@ TRY & Kết quả:
 **Manager feedback (Trần Đạt, ⭐4 sao — Xuất sắc)**:
 > Tuần này em làm rất tốt, đặc biệt phần:
 >
-> - **Modular Architecture**: Build core features thành module riêng biệt → code tuân thủ mô hình Modular, gọn gàng, chia tách trách nhiệm rõ ràng và dễ maintain.
+> - **Modular Architecture**: Build core features thành module riêng biệt → code Modular, gọn gàng, dễ maintain.
 > - **Chốt tech cross-team**: Phối hợp team AI chốt Lib Sync → demo không bị treo do thiếu data thật.
-> - **Tối ưu phân bổ nguồn lực**: Delegate Lib Sync cho Hiếu sau khi đánh giá hướng tiếp cận hiệu quả hơn → vừa khích lệ tinh thần Hiếu, vừa giải phóng thời gian hoàn thiện các core module khác.
+> - **Tối ưu phân bổ nguồn lực**: Delegate Lib Sync cho Hiếu → khích lệ tinh thần Hiếu, giải phóng thời gian hoàn thiện core modules.
 >
-> "Phần module sẽ hỗ trợ rất lớn để sau này mình có thể nhân bản, ngoài ra em phối hợp tốt với các đầu để dự án mượt mà hơn cũng như vẫn đảm bảo giúp đỡ Hiếu phát triển (thông qua giao việc và hỗ trợ). Anh để mức đánh giá 4 sao (Xuất sắc) nhé, tiếp tục phát huy Dũng nhé."
+> "Phần module sẽ hỗ trợ rất lớn để sau này mình có thể nhân bản, ngoài ra em phối hợp tốt với các đầu để dự án mượt mà hơn cũng như vẫn đảm bảo giúp đỡ Hiếu phát triển. Anh để mức đánh giá 4 sao (Xuất sắc) nhé, tiếp tục phát huy Dũng nhé."
 
 ⭐ **Insight**: Tuần này là **bước chuyển từ Research → Execution** rõ nét nhất — W21 research đầy đủ nên W22 ship được 5 deliverables trong 1 tuần. Pattern "chuẩn bị kỹ → execute nhanh" này là evidence mạnh cho **Tech R&D 4.3 (tích hợp nhiều công nghệ)** + **Ownership 4.2 (multi-goal management)**. Strategic delegation cho Hiếu cũng đang tiến sát **Continuous Dev 4.7 (Coach/Mentor)**. Manager rating 4⭐ Xuất sắc = tín hiệu tích cực cho Mid-year Checkpoint 6/2026.
 
@@ -403,67 +403,103 @@ SP1 — AI Learn (AI Task + AI Talk):
 - **Moko Permission**: implement xong, plug vào các flow cần permission.
 - **AI Task UI/UX**: Layout cơ bản + 3 anim chuyển trạng thái (Explain↔Collapse, Recording, Model Move) + UI tooltip cho AI Talk.
 - **AI Task Logic**: Logic Explain-Collapse, Speech-to-Text, Permission, tooltip AI Talk → flow business chạy thông.
-- **Phân chia task team Android**: chia theo nguyện vọng + cảm hứng từng member → mỗi người nhận task phù hợp năng lực và động lực, đẩy nhanh phần còn lại AI Talk.
-- **Loạt họp cross-team AI/BE/Client/QA**: đóng đồng thời 3 vai trò — Solution Proposer, Translator, Facilitator → chốt được BE trả Swagger AI Talk thứ 2 + các phần còn lại thứ 5.
-- → Tiến độ AI Talk ~50% (xong UI + Logic tooltip + Permission + Speech-to-Text), đúng cam kết PM (E1 KS1); 50% còn lại ship W24 khi BE trả Swagger.
+- **Phân chia task team Android**: chia theo nguyện vọng + cảm hứng từng member → mỗi người nhận task phù hợp, đẩy nhanh phần còn lại AI Talk.
+- **Loạt họp cross-team AI/BE/Client/QA**: đóng đồng thời 3 vai trò — Solution Proposer, Translator, Facilitator → chốt BE trả Swagger AI Talk thứ 2 + các phần còn lại thứ 5.
+- → AI Talk ~50%, đúng cam kết PM (E1 KS1); 50% còn lại ship W24 khi BE trả Swagger.
 
 SP2 — Chat IAA (hotfix policy):
-- **Hotfix Paywall policy**: nhận info tối T6, fix + self-test kỹ ngay trong đêm.
+- **Hotfix Paywall policy**: nhận info tối T6, fix + self-test ngay trong đêm.
 - **Hotfix Permission policy**: nhận info sáng T7, fix + self-test hoàn tất.
-- → E1 KS1: response hotfix nhanh, chất lượng — không để app vi phạm policy.
+- → E1 KS1: response hotfix nhanh, chất lượng.
 
-**Cách làm (IKAME HOW) — 3-role cross-team facilitation + Hotfix ownership**:
+**Cách làm (IKAME HOW)**:
+- Hotfix cuối tuần Chat IAA: take ngoài giờ (đêm T6 + sáng T7) → app không vi phạm policy.
+- Anim phức tạp: tự convert video demo → GIF → align nhanh với AI/design.
+- Họp cross-team — 3 vai trò: (a) Solution Proposer: đề xuất giải pháp kỹ thuật cho AI, logic cho BE, contract BE↔Client; (b) Translator: clear shared vocabulary giữa AI/UI/PM; (c) Facilitator: chốt timeline cụ thể.
+- Phân chia task Android theo nguyện vọng + cảm hứng từng member.
 
-Chủ động xoay xở:
-- **Hotfix cuối tuần Chat IAA**: take ngoài giờ (đêm T6 + sáng T7) → app không bị vi phạm policy sang tuần sau.
-- **Anim phức tạp khó mô tả**: tự convert video demo → GIF rồi đưa cho AI/design để align nhanh, tránh hỏi đi hỏi lại.
-- **Chủ động làm việc với Design** thống nhất kỳ vọng UI + Anim trước khi code → tránh rework.
+**⭐ IDP tags**: #1 Innovation 4.6 | #7 Continuous Dev 4.7 (mới!) | #10 Ownership 4.3 | #11 Ownership 4.5 (mới!) | #13 Ownership 4.7 (mới!) | #14 Ownership 4.8 (mới!) | #16 Tech R&D 4.7
 
-Trong loạt họp cross-team — đóng 3 vai trò đồng thời:
+**Self-rating**: Làm tốt
 
-**(a) Solution Proposer**: Đề xuất giải pháp quản lý process Lesson cho AI (start session, tạo conversation, update trạng thái); logic business cho BE (streak, spent time); contract giao tiếp BE↔Client (WebSocket, API fields).
+**Manager feedback (Trần Đạt, ⭐4 sao — Làm xuất sắc)**:
+> Okie Dũng, dựa theo quan sát và báo cáo tuần này thì anh đánh giá em đạt mức 4 Sao (Làm xuất sắc) nhé. Tuần này em đã thể hiện năng lực vượt scope của một Dev, nâng chuẩn mực cao cho đội ngũ:
+>
+> - **Trách nhiệm & Cam kết cao (Chat IAA)**: Chủ động take task ngoài giờ (đêm T6 + sáng T7) xử lý 2 Hotfix policy (Paywall & Permission), bảo vệ app an toàn trước rủi ro bay màu :D
+> - **Đóng góp vượt scope & Vai trò Lead (AI Learn)**: Đóng đồng thời 3 vai trò (Solution Proposer, Translator, Facilitator), đề xuất giải pháp kỹ thuật cho AI, logic cho BE, tự viết contract chi tiết để drive timeline trả Swagger.
+> - **Cải tiến & Ứng dụng thực tế**: Quy trình "Video demo → GIF" giảm round giao tiếp với Design. Áp dụng EQ chia task theo nguyện vọng/động lực → tư duy quản trị con người rất tốt.
+> - **Level-up công nghệ**: Làm chủ Side Effect API, Compose Phases trên KMP để tối ưu hiệu năng ngay từ bước demo.
 
-**(b) Communicator / Translator**: AI hiểu "process của conversation", UI hiểu "type của message", PM gộp 2 ý làm một → đứng ra clear cho cả 3 bên shared vocabulary. Diễn giải mong muốn PM cho BE/Design → chốt timeline cụ thể.
+⭐ **Insight**: Tuần này là **bước chuyển về vai trò** — từ "dev ship module" (W22) lên "tech anchor giữa nhiều team" (W23). 4 gap behaviors mới chạm lần đầu (#7, #11, #13, #14) = tín hiệu Dũng đang operate ở level Senior. Manager rating 4⭐ liên tiếp W22 + W23 = momentum mạnh trước Mid-year Checkpoint.
 
-**(c) Facilitator**: Điều phối cuộc họp, raise vấn đề, đặt câu hỏi chốt timeline ("bao giờ có Swagger?" → chốt được thứ 2).
+---
+
+### Tháng 6 W2 — W24 (13/06/2026) — ⭐ Doc-first + unblock cross-team dependency
+**Sản phẩm**: AI Learn (AI Talk + Tab Practice + Login) — tag E1 KS1, E2 KS1
+
+**Kết quả (IKAME WHAT)**:
+
+SP1 — AI Learn (3 nhóm feature ship trong tuần):
+
+*AI Talk Logic (9 hạng mục)*:
+- Change Speed, Input by Text, Typing Animation, Recording State, Generating State, Fullscreen AI Message, Speech-to-Text error handling, **Implement Lib Sync** (chính thức sau 2 tuần research W21 + demo W22), Play message audio.
+- → Hoàn thành Logic AI Talk phía app bằng local mock tự build; chưa ghép mock BE (BE chưa deploy) → W25 ghép mock BE, sau đó integrate API thật.
+
+*Tab Practice*: Layout + local mock data → khung sẵn sàng cắm data thật khi BE trả.
+
+*Login*: Implement API auth theo doc mock BE; chưa thông luồng vì BE chưa deploy → verify end-to-end khi BE deploy mock.
+
+- → **E1 KS1**: 3 nhóm feature ship đúng plan.
+
+Hỗ trợ cross-project:
+- Check dự án Chat IAA giúp Phương Anh khi được tag.
+- Review code Hiếu ở Chat IAP + AI Home — dành nhiều thời gian review chuyên sâu (E2 KS1).
+
+**Cách làm (IKAME HOW) — Doc-first + Figma-proactive + Cross-project support**:
+
+Chủ động unblock dependency:
+- **Push BE cung cấp doc mock data sớm** (auth, ai_talk) → Client triển khai Logic + UI dựa trên doc, không phải chờ BE deploy Mock API.
+- **Tự build local mock** theo doc BE → UI không bị treo, sẵn sàng swap sang API thật khi BE deploy.
+- **Figma thiếu Flow/UX**: chủ động verify lại + bổ sung → tránh "code xong mới phát hiện thiếu case".
+- **UI chưa ổn**: chủ động feedback design → fix sớm, không để tới QA mới sửa.
+
+Phối hợp đa đầu:
+- **Với Design**: phối hợp liên tục bổ sung luồng AI Talk — đứng vai Translator giữa code reality và design intent. Là người comment nhiều nhất trên Figma (feedback, clear thông tin, đề xuất chỉnh sửa).
+- **Với BE**: drive ra doc mock data auth + ai_talk sớm → Client không bị bottleneck.
+- **Trong cuộc họp tuần**: chủ động đưa solution cho các vấn đề được nêu (bao gồm vấn đề bản quyền outsource spine + logic trong app) → cuộc họp ra được hướng đi.
+- **Với Phương Anh (Chat IAA)**: support check dự án khi được tag.
+- **Với Hiếu (Chat IAP, AI Home)**: review code 2 dự án → mentor sâu trong context production.
 
 TRY & Kết quả:
-- Try 1 (Worked): **Video → GIF → input AI/design** → gỡ bottleneck trao đổi anim phức tạp, giảm round với design.
-- Try 2 (Worked): **Phân chia task theo nguyện vọng + cảm hứng** → team nhận task phù hợp (verify quality/velocity ở W24).
-- Try 3 (Worked): **Hotfix ngoài giờ + self-test kỹ** → fix xong cả 2 policy trong cuối tuần, không re-open.
+- Try 1 (Worked): **Doc-first + Client local mock** → Client implement 9 hạng mục Logic AI Talk + Login + Tab Practice ngay trong tuần mà không chờ BE deploy.
+- Try 2 (Worked): **Implement chính thức Lib Sync** (sau 2 tuần research/demo) → chốt approach từ phase research, integrate vào AI Talk flow.
 
-Cải tiến: Quy trình "video demo → GIF → input AI/design" — propose thành chuẩn team cho mọi project có anim phức tạp.
+Cải tiến: Quy trình **"Doc-first + Client local mock"** — thay vì chờ BE deploy Mock API, push BE cung cấp doc sớm rồi Client tự build local mock theo doc → đề xuất nâng thành chuẩn team cho mọi project có cross-team dependency.
 
 **Level up (IKAME LEVEL UP)**:
-- **Side Effect API trong Compose**: hiểu quản lý side effect đúng lifecycle composition qua build anim Explain-Collapse + Recording.
-- **Compose Phases** (composition → layout → drawing): tối ưu performance khi nhiều anim chạy đồng thời.
-- **Moko Permission cross-platform**: nắm cách dùng cho KMP project qua implement thực tế.
-- **Lottie Animation trong KMP**: nắm cách tích hợp trong KMP (khác Android thuần) → áp dụng cho các anim còn lại.
-- **Cross-team facilitation**: đúc kết 3 vai trò rõ ràng khi 1 dev đứng giữa nhiều bên.
-- **Điều làm tốt hơn**: W22 chốt 1 công nghệ cross-team (Lib Sync) → W23 nâng lên đứng giữa 6 đầu (AI/BE/Client/Design/PM/QA) với 3 vai trò đồng thời.
-- **Vấn đề khó**: Team đông đầu hiểu lệch nhau → root cause: thiếu shared vocabulary → fix: mapping ngôn ngữ giữa các bên, ép chốt thuật ngữ chung → impact: tất cả bên nhìn vấn đề như nhau.
+- **Ktor trong KMP**: nắm cách dùng Ktor client cross-platform qua implement API auth + ai_talk — khác với Retrofit thuần Android.
+- **Manage State trong Compose UI**: hiểu sâu state hierarchy + scope khi UI có nhiều state đan xen (qua chuẩn bị sharing).
+- **Vấn đề khó**: BE chưa deploy Mock API, Client nguy cơ stuck nửa tuần → fix: Doc-first + local mock → impact: 3 nhóm feature ship đúng plan.
 
 **Tồn đọng & rủi ro**:
-- BE trả Swagger AI Talk thứ 2 + các phần còn lại thứ 5 → schedule tight.
-- Hướng xử lý: W24 prep skeleton Client cho AI Talk (mock contract theo đề xuất đã đưa BE) → integrate ngay khi BE trả, không bị bottleneck.
+- Tab Practice dùng local mock, chưa cắm API thật. Nếu BE trả Practice API trễ → không demo được dữ liệu thật cho PM.
+- Hướng xử lý: W25 follow-up BE về timeline deploy Mock API + API thật từng phần để Client integrate đúng nhịp.
 
 **Cần hỗ trợ**:
-- **TL**: Review approach AI Task UI có nhiều anim chạy đồng thời (Explain-Collapse + Recording + Model Move) — confirm Side Effect API + Compose Phases đúng best practice, tránh performance issue ở phase 2.
+- **TL**: Hỗ trợ tổ chức 1 buổi sharing (Manage State trong Compose UI hoặc AI workflow).
 - Manager: N/A.
 
 **⭐ IDP / Gap behaviors evidence (auto-tag)**:
-- **#1 Innovation 4.6** — Quy trình "video → GIF → input AI/design" cho anim phức tạp → đề xuất thành chuẩn team.
-- **#7 Continuous Dev 4.7** (⭐ **Gap mới chạm lần đầu!**) — Translator cross-team: ép shared vocabulary giữa AI/BE/Client/Design/PM/QA = "training" toàn team về ngôn ngữ chung.
-- **#10 Ownership 4.3** — Đề xuất logic business cho BE (streak, spent time) + giải pháp quản lý process Lesson cho AI.
-- **#11 Ownership 4.5** (⭐ **Gap mới chạm lần đầu!**) — Phân chia task Android dựa trên nguyện vọng + cảm hứng từng member.
-- **#13 Ownership 4.7** (⭐ **Gap mới chạm lần đầu!**) — Chia task theo cảm hứng member → tác động trực tiếp vào động lực.
-- **#14 Ownership 4.8** (⭐ **Gap mới chạm lần đầu!**) — Chủ động take hotfix Chat IAA đêm T6 + sáng T7 — giữ tinh thần chuyên nghiệp khi gặp việc đột xuất.
-- **#16 Tech R&D 4.7** — Quy trình GIF-from-video cho anim → có thể nâng thành chuẩn team.
+- **#1 Innovation 4.6** — Quy trình "Doc-first + Client local mock" → đề xuất nâng thành chuẩn team.
+- **#5 Continuous Dev 4.3** — Review code Hiếu sâu trên 2 dự án (Chat IAP + AI Home) → mentor trong context production. Evidence mạnh E2 KS1.
+- **#9 Ownership 4.2** — Cùng tuần: AI Talk 9 items + Tab Practice + Login + mentor Hiếu 2 dự án + support Phương Anh — không drop ball.
+- **#10 Ownership 4.3** — Support Phương Anh check Chat IAA, đưa solution trong cuộc họp tuần (bản quyền spine + app logic).
+- **#16 Tech R&D 4.7** — "Doc-first + Client local mock" approach → nâng thành chuẩn team.
 
 **Self-rating**: Làm tốt
-**Lý do**: Ship Moko Permission + AI Task UI/UX + AI Task Logic + AI Talk ~50% đúng cam kết PM (E1 KS1), take 2 hotfix Chat IAA ngoài giờ, đứng vai trò Solution/Translator/Facilitator giữa 6 đầu cross-team và chốt được timeline BE trả tuần tới → đóng góp vượt scope dev thuần, giúp cả phase 1 AI Learn chạy thông.
+**Lý do**: Ship đúng plan 3 nhóm feature Client (AI Talk Logic + Tab Practice + Login) trong điều kiện BE chưa deploy Mock API — chủ động push BE trả doc sớm + tự build local mock để unblock (E1 KS1). Đồng thời follow sát Chat IAP + AI Home (E2 KS1) và support cross-project cho Phương Anh — vượt scope dev thuần.
 
-⭐ **Insight**: Tuần này là **bước chuyển về vai trò** — từ "dev ship module" (W22) lên "tech anchor giữa nhiều team" (W23). 4 gap behaviors mới chạm lần đầu (#7, #11, #13, #14) trong 1 tuần = tín hiệu rõ Dũng đang operate ở level Senior. Đặc biệt #11 (Strength/weakness team) + #13 (Động lực thành viên) là 2 behavior khó evidence nhất trong nhóm Ownership — W23 có evidence thực tế và tự nhiên.
+⭐ **Insight**: Tuần này là **bước chín muồi về tư duy unblock** — thay vì "chờ BE", Dũng tạo ra giải pháp mới (Doc-first + local mock) để team không bị stuck. Pattern này ăn khớp với **Tech R&D 4.7 (cải tiến quy trình)** + **Innovation 4.6 (đề xuất áp dụng cho cả team)**. Lib Sync được implement chính thức sau 2 tuần research/demo = đúng pattern "nghiên cứu kỹ → implement tự tin".
 
 
 ## Patterns observed across H1
