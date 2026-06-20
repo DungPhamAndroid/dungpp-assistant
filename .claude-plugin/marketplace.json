@@ -1,0 +1,9 @@
+{
+  "name": "DungPP Personal Marketplace",
+  "plugins": [
+    {
+      "id": "dungpp-assistant",
+      "path": "."
+    }
+  ]
+}
