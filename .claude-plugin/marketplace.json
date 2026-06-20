@@ -1,0 +1,10 @@
+{
+  "name": "DungPP Assistant Marketplace",
+  "plugins": [
+    {
+      "name": "dungpp-assistant",
+      "path": ".",
+      "description": "Personal assistant plugin for DungPP - Android/KMP development"
+    }
+  ]
+}
