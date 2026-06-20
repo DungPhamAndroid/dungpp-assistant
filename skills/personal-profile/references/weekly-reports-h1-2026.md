@@ -415,7 +415,7 @@ SP2 — Chat IAA (hotfix policy):
 **Cách làm (IKAME HOW)**:
 - Hotfix cuối tuần Chat IAA: take ngoài giờ (đêm T6 + sáng T7) → app không vi phạm policy.
 - Anim phức tạp: tự convert video demo → GIF → align nhanh với AI/design.
-- Họp cross-team — 3 vai trò: (a) Solution Proposer: đề xuất giải pháp kỹ thuật cho AI, logic cho BE, contract BE↔Client; (b) Translator: clear shared vocabulary giữa AI/UI/PM; (c) Facilitator: chốt timeline cụ thể.
+- Họp cross-team — 3 vai trò: (a) Solution Proposer; (b) Translator: clear shared vocabulary; (c) Facilitator: chốt timeline cụ thể.
 - Phân chia task Android theo nguyện vọng + cảm hứng từng member.
 
 **⭐ IDP tags**: #1 Innovation 4.6 | #7 Continuous Dev 4.7 (mới!) | #10 Ownership 4.3 | #11 Ownership 4.5 (mới!) | #13 Ownership 4.7 (mới!) | #14 Ownership 4.8 (mới!) | #16 Tech R&D 4.7
@@ -441,13 +441,12 @@ SP2 — Chat IAA (hotfix policy):
 
 SP1 — AI Learn (3 nhóm feature ship trong tuần):
 
-*AI Talk Logic (9 hạng mục)*:
-- Change Speed, Input by Text, Typing Animation, Recording State, Generating State, Fullscreen AI Message, Speech-to-Text error handling, **Implement Lib Sync** (chính thức sau 2 tuần research W21 + demo W22), Play message audio.
-- → Hoàn thành Logic AI Talk phía app bằng local mock tự build; chưa ghép mock BE (BE chưa deploy) → W25 ghép mock BE, sau đó integrate API thật.
+*AI Talk Logic (9 hạng mục)*: Change Speed, Input by Text, Typing Animation, Recording State, Generating State, Fullscreen AI Message, Speech-to-Text error handling, **Implement Lib Sync** (chính thức sau research W21 + demo W22), Play message audio.
+- → Hoàn thành Logic AI Talk phía app bằng local mock tự build; W25 ghép mock BE, sau đó integrate API thật.
 
 *Tab Practice*: Layout + local mock data → khung sẵn sàng cắm data thật khi BE trả.
 
-*Login*: Implement API auth theo doc mock BE; chưa thông luồng vì BE chưa deploy → verify end-to-end khi BE deploy mock.
+*Login*: Implement API auth theo doc mock BE; verify end-to-end khi BE deploy mock.
 
 - → **E1 KS1**: 3 nhóm feature ship đúng plan.
 
@@ -456,50 +455,44 @@ Hỗ trợ cross-project:
 - Review code Hiếu ở Chat IAP + AI Home — dành nhiều thời gian review chuyên sâu (E2 KS1).
 
 **Cách làm (IKAME HOW) — Doc-first + Figma-proactive + Cross-project support**:
-
-Chủ động unblock dependency:
-- **Push BE cung cấp doc mock data sớm** (auth, ai_talk) → Client triển khai Logic + UI dựa trên doc, không phải chờ BE deploy Mock API.
+- **Push BE cung cấp doc mock data sớm** → Client triển khai Logic + UI dựa trên doc, không chờ BE deploy.
 - **Tự build local mock** theo doc BE → UI không bị treo, sẵn sàng swap sang API thật khi BE deploy.
-- **Figma thiếu Flow/UX**: chủ động verify lại + bổ sung → tránh "code xong mới phát hiện thiếu case".
-- **UI chưa ổn**: chủ động feedback design → fix sớm, không để tới QA mới sửa.
-
-Phối hợp đa đầu:
-- **Với Design**: phối hợp liên tục bổ sung luồng AI Talk — đứng vai Translator giữa code reality và design intent. Là người comment nhiều nhất trên Figma (feedback, clear thông tin, đề xuất chỉnh sửa).
-- **Với BE**: drive ra doc mock data auth + ai_talk sớm → Client không bị bottleneck.
-- **Trong cuộc họp tuần**: chủ động đưa solution cho các vấn đề được nêu (bao gồm vấn đề bản quyền outsource spine + logic trong app) → cuộc họp ra được hướng đi.
-- **Với Phương Anh (Chat IAA)**: support check dự án khi được tag.
-- **Với Hiếu (Chat IAP, AI Home)**: review code 2 dự án → mentor sâu trong context production.
+- **Figma thiếu Flow/UX**: chủ động verify + bổ sung → tránh "code xong mới phát hiện thiếu case".
+- **Với Design**: comment nhiều nhất trên Figma — đứng vai Translator giữa code reality và design intent.
+- **Trong cuộc họp tuần**: chủ động đưa solution cho vấn đề bản quyền outsource spine + logic app.
+- **Với Phương Anh**: support Chat IAA khi được tag.
+- **Với Hiếu**: review code 2 dự án → mentor sâu trong context production.
 
 TRY & Kết quả:
-- Try 1 (Worked): **Doc-first + Client local mock** → Client implement 9 hạng mục Logic AI Talk + Login + Tab Practice ngay trong tuần mà không chờ BE deploy.
-- Try 2 (Worked): **Implement chính thức Lib Sync** (sau 2 tuần research/demo) → chốt approach từ phase research, integrate vào AI Talk flow.
+- Try 1 (Worked): **Doc-first + Client local mock** → implement 9 hạng mục Logic AI Talk + Login + Tab Practice trong tuần mà không chờ BE deploy.
+- Try 2 (Worked): **Implement chính thức Lib Sync** → chốt approach từ phase research, integrate vào AI Talk flow.
 
-Cải tiến: Quy trình **"Doc-first + Client local mock"** — thay vì chờ BE deploy Mock API, push BE cung cấp doc sớm rồi Client tự build local mock theo doc → đề xuất nâng thành chuẩn team cho mọi project có cross-team dependency.
+Cải tiến: **"Doc-first + Client local mock"** — push BE trả doc sớm, Client tự build local mock → đề xuất nâng thành chuẩn team cho mọi project có cross-team dependency.
 
 **Level up (IKAME LEVEL UP)**:
-- **Ktor trong KMP**: nắm cách dùng Ktor client cross-platform qua implement API auth + ai_talk — khác với Retrofit thuần Android.
-- **Manage State trong Compose UI**: hiểu sâu state hierarchy + scope khi UI có nhiều state đan xen (qua chuẩn bị sharing).
-- **Vấn đề khó**: BE chưa deploy Mock API, Client nguy cơ stuck nửa tuần → fix: Doc-first + local mock → impact: 3 nhóm feature ship đúng plan.
+- **Ktor trong KMP**: nắm Ktor client cross-platform qua implement API auth + ai_talk.
+- **Manage State trong Compose UI**: hiểu state hierarchy + scope khi UI có nhiều state đan xen.
 
-**Tồn đọng & rủi ro**:
-- Tab Practice dùng local mock, chưa cắm API thật. Nếu BE trả Practice API trễ → không demo được dữ liệu thật cho PM.
-- Hướng xử lý: W25 follow-up BE về timeline deploy Mock API + API thật từng phần để Client integrate đúng nhịp.
+**Tồn đọng & rủi ro**: Tab Practice dùng local mock — nếu BE trả Practice API trễ → không demo được dữ liệu thật. Hướng xử lý: W25 follow-up BE về timeline.
 
-**Cần hỗ trợ**:
-- **TL**: Hỗ trợ tổ chức 1 buổi sharing (Manage State trong Compose UI hoặc AI workflow).
-- Manager: N/A.
+**Cần hỗ trợ**: TL hỗ trợ tổ chức 1 buổi sharing. Manager: N/A.
 
-**⭐ IDP / Gap behaviors evidence (auto-tag)**:
-- **#1 Innovation 4.6** — Quy trình "Doc-first + Client local mock" → đề xuất nâng thành chuẩn team.
-- **#5 Continuous Dev 4.3** — Review code Hiếu sâu trên 2 dự án (Chat IAP + AI Home) → mentor trong context production. Evidence mạnh E2 KS1.
-- **#9 Ownership 4.2** — Cùng tuần: AI Talk 9 items + Tab Practice + Login + mentor Hiếu 2 dự án + support Phương Anh — không drop ball.
-- **#10 Ownership 4.3** — Support Phương Anh check Chat IAA, đưa solution trong cuộc họp tuần (bản quyền spine + app logic).
-- **#16 Tech R&D 4.7** — "Doc-first + Client local mock" approach → nâng thành chuẩn team.
+**⭐ IDP tags**: #1 Innovation 4.6 | #5 Continuous Dev 4.3 | #9 Ownership 4.2 | #10 Ownership 4.3 | #16 Tech R&D 4.7
 
 **Self-rating**: Làm tốt
 **Lý do**: Ship đúng plan 3 nhóm feature Client (AI Talk Logic + Tab Practice + Login) trong điều kiện BE chưa deploy Mock API — chủ động push BE trả doc sớm + tự build local mock để unblock (E1 KS1). Đồng thời follow sát Chat IAP + AI Home (E2 KS1) và support cross-project cho Phương Anh — vượt scope dev thuần.
 
-⭐ **Insight**: Tuần này là **bước chín muồi về tư duy unblock** — thay vì "chờ BE", Dũng tạo ra giải pháp mới (Doc-first + local mock) để team không bị stuck. Pattern này ăn khớp với **Tech R&D 4.7 (cải tiến quy trình)** + **Innovation 4.6 (đề xuất áp dụng cho cả team)**. Lib Sync được implement chính thức sau 2 tuần research/demo = đúng pattern "nghiên cứu kỹ → implement tự tin".
+**Manager feedback (Trần Đạt, ⭐3.7 sao — Làm tốt, tiệm cận xuất sắc)**:
+> Tuần vừa rồi em đã hoàn thành rất tốt công việc:
+>
+> - **Đảm bảo timeline**: Bám sát và ship đúng kế hoạch.
+> - **Review code cho Hiếu**: Tiếp tục mentor chuyên sâu.
+> - **Hỗ trợ sản phẩm đang vận hành (Chat)**: Support cross-project tốt.
+> - **Xoay xở giảm thiểu stuck tiến độ**: Tìm ra giải pháp chủ động khi gặp bottleneck.
+>
+> "Anh để đánh giá 3,7 sao (Làm tốt) tiệm cận xuất sắc nhé. Phần How em đạt 4 sao và phần What tiệm cận 4 sao — cần tiến độ vượt kỳ vọng để được 4 sao phần What."
+
+⭐ **Insight**: Rating 3.7⭐ với HOW đạt 4 sao = Manager đánh giá cao **cách làm việc** của Dũng, signal rõ để đẩy WHAT lên 4 sao chỉ cần ship nhanh hơn kỳ vọng. Với AI Learn đang ở giai đoạn integrate API thật, W25 là cơ hội để demonstrate velocity vượt kỳ vọng.
 
 
 ## Patterns observed across H1
