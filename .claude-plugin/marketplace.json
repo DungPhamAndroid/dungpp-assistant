@@ -1,0 +1,11 @@
+{
+  "name": "DungPP Assistant",
+  "description": "Personal assistant plugin for DungPP - Android/KMP development context",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "dungpp-assistant",
+      "path": "."
+    }
+  ]
+}
