@@ -13,8 +13,121 @@
 - Hỗ trợ PM mới hiểu app & CMS
 - Cảm hứng từ chia sẻ anh Quyết trong YEP
 
-### Tháng 2 W2-W3, Tháng 3 W2, Check-in 11/3
-*(Báo cáo còn lại chưa fetch được. Đề xuất Dũng tự bổ sung khi có thời gian)*
+### Tháng 2 — Báo cáo W2 (08/02/2026) — Release AI Home 1.0.1 + Ownership cao
+
+**Sản phẩm**: AI Home version 1.0.1
+
+**Kết quả (IKAME WHAT)**:
+- **Release AI Home 1.0.1** — ship đúng deadline trước Tết:
+  - Limit generate count + remote config
+  - Zoom in / Zoom out ảnh result
+  - Thêm Tab Create (user tạo thiết kế nhanh)
+  - Thêm tính năng Change Icon
+  - Update new API
+  - Màn Result: new UI
+  - Fix bug đa ngôn ngữ
+  - Optimize luồng check IAP ở các tab để hiển thị button VIP
+  - Hỗ trợ Hiếu release app đúng kế hoạch: fix lỗi lap không phát video trên thiết bị đời cũ; refactor remote config IAP linh hoạt hơn
+- **Hỗ trợ Hiếu NV**: đưa giải pháp tạm thời cho lỗi video (8–9h tối thứ 6); góp ý logic check remote config IAP điều luồng mượt hơn.
+- **Hỗ trợ team AI Home**: self-test API mới khi tester bận + BE mới deploy môi trường dev; hỗ trợ PM nhập dữ liệu CMS.
+
+**Cách làm nổi bật (IKAME HOW)**:
+- Tối thứ 6 team đi liên hoan cuối năm → Dũng đặt ưu tiên release app, ở lại hoàn thiện để có số Performance trước Tết.
+- Thứ 7 OT hỗ trợ phần của Hiếu (Hiếu bận việc cá nhân) để đảm bảo app lên đẩy user vào chủ nhật.
+
+**⭐ IDP tags**: #14 Ownership 4.8 (OT cuối tuần chủ động, không ai yêu cầu) | #5 Continuous Dev 4.3 (mentor Hiếu giải pháp IAP + video) | #9 Ownership 4.2 (multi-task release + support)
+
+**Self-rating**: *(không ghi rõ trong báo cáo)*
+
+---
+
+### Tháng 2 — Báo cáo W3 (13/02/2026) — Hoàn thiện phase trước Tết *(Báo cáo tức thời)*
+
+**Sản phẩm**: AI Home — phase trước Tết
+
+**Kết quả (IKAME WHAT)**:
+- Hoàn thiện phase trước Tết:
+  - Fix crash Firebase
+  - Optimize màn Result
+  - Bổ sung Surprise Color
+  - Fix bug Asana
+  - Optimize database
+- Hỗ trợ đưa giải pháp phát video màn IAP
+- Review code cho Hiếu
+
+**⭐ IDP tags**: #5 Continuous Dev 4.3 (review code Hiếu) | #10 Ownership 4.3 (hỗ trợ giải pháp kỹ thuật IAP video)
+
+**Self-rating**: *(báo cáo tức thời, không có mục đánh giá)*
+
+---
+
+### Tháng 3 — Báo cáo W2 (14/03/2026) — Short Polling migration + Cross-team coordination
+
+**Sản phẩm**: AI Home
+
+**IKAME WHAT (KẾT QUẢ)**:
+- **Optimize cơ chế API → Short Polling** để giảm tỉ lệ lỗi các API design có thời gian thực hiện dài + giảm user kill app hủy tiến trình:
+  - Triển khai API job
+  - Thanh process cho từng feature (sát thực tế, cải thiện trải nghiệm đợi)
+  - Xử lý timeout thủ công toàn bộ tiến trình
+  - Làm việc với BE: xử lý notification + config FCM trên app
+  - Làm việc với BI: lên plan tracking API + ai_feature cho cơ chế mới, gắn tracking trên app
+  - Xử lý lỗi connection: lưu lại thiết kế lỗi + đẩy vào danh sách project cho phép retry
+  - Luồng error + retry ở Project Tab
+- **Fix bug**: phối hợp với Tester
+- **Product**: Review code, góp ý phần notification + ads cho Hiếu
+
+**IKAME HOW (CÁCH LÀM)**:
+- Chủ động lên phương án khi nhiều case phát sinh so với doc ban đầu:
+  - Phát hiện tracking cũ sẽ sai với cơ chế mới → đề xuất tách dashboard API vs AI_feature, ra trực tiếp gặp BI chốt plan tracking cuối cùng
+  - Optimize phần process (tránh user đứng mãi ở 99%)
+  - Chủ động push BE + team AI khi timeline có nguy cơ chậm
+  - Thử tối ưu chi phí request → phương án fail (chưa tính case API lỗi ngay giây đầu) → rút kinh nghiệm
+- Phối hợp liên tục với BI, BE, Tester; đưa trước các edge cases cho tester (phần ads)
+- **Giữ bình tĩnh khi tester xếp ưu tiên sau cùng** — không để cảm xúc ảnh hưởng tiến độ
+
+**IKAME LEVEL UP**:
+- Kiến thức bảo mật Android qua buổi sharing của anh ThọDD
+- Đọc xong "Người thông minh giải quyết vấn đề thế nào": dùng sơ đồ cây xác định vấn đề, biểu đồ khó-dễ / tác động cao-thấp để chọn phương án
+- Break task triệt để khi nhận task mô tả chung chung → không bị rối, không sót → đảm bảo chất lượng đầu ra
+
+**Tồn đọng & rủi ro**: Bản minimize đã xong (tester verify) nhưng chưa merge do version ads của Hiếu vừa release → tránh conflict. Nếu merge thứ 7/CN sẽ phát sinh OT cho tester + dev.
+
+**Cần hỗ trợ**: N/A
+
+**⭐ IDP tags**: #1 Innovation 4.6 (đề xuất tách tracking dashboard; phát hiện + optimize process) | #5 Continuous Dev 4.3 (review code Hiếu notification + ads) | #9 Ownership 4.2 (điều phối BE, AI, BI, tester song song) | #12 Ownership 4.6 (bình tĩnh khi tester deprioritize)
+
+**Self-rating**: Làm tốt
+**Lý do**: Đảm bảo tiến độ dự án.
+
+**Manager feedback (Trần Đạt, ⭐4 sao — Làm tốt)**:
+> "Okie em, tuần này em làm và học được nhiều cái hay ho thật" *(14/03)*
+>
+> *(16/03 — câu hỏi phát triển)*: "@Phạm Phú Dũng Trong trường hợp có nhiều bản release, em có cách nào để tính toán kỹ được thời gian release và hướng xử lý khi phát sinh vấn đề không"
+>
+> "Ngoài đảm bảo tiến độ sản phẩm thì e cũng chủ động tối ưu rất nhiều + xoay xở để kịp timeline. Sau trao đổi thì bọn anh quyết định đánh giá Dũng **4 sao** nhé, mong rằng em tiếp tục giữ vững tinh thần chiến và chủ động nhé." *(16/03)*
+
+⭐ **Insight**: 4⭐ lần 2 liên tiếp (W2/2 → W2/3). Manager highlight "chủ động tối ưu + xoay xở" = đúng HOW pattern Dũng đang build. Câu hỏi về release planning là signal Manager muốn Dũng nâng tư duy **release risk management** — đây là gap cần thể hiện ở các tuần tới.
+
+---
+
+### Check-in ngày 11/3/2026 *(ghi nhận từ Manager)*
+
+**Những điểm phát huy**:
+- Tinh thần làm việc, cam kết deadline, toàn tâm với sản phẩm, nghiên cứu và làm việc bất kể thời gian — được PM, UI/UX và QA đánh giá cao.
+- Chất lượng bản build "rất chỉn chu", tạo được sự yên tâm với các bộ phận khác.
+- Tương tác trên nhóm "năng nổ, nhiệt tình", được PM "highlight" và ghi nhận.
+
+**Những khó khăn**:
+- Mentoring: Người được mentor chưa sẵn sàng tiếp nhận.
+- IDP: Chưa biết cụ thể làm những mục nào (có chia ưu tiên không).
+
+**Next Step**:
+- Hoàn thành tự đánh giá trên iGrow2.
+- Lên kế hoạch cho buổi Seminar.
+- Thay đổi cách tiếp cận với Hiếu: "cởi tư thế thủ" của Hiếu bằng cách chia sẻ về mindset cuộc sống, chia sẻ kinh nghiệm, mục tiêu cá nhân, tạo niềm tin rằng những góp ý là vì điều tốt → Mục tiêu: "Truyền cho Hiếu được kỹ năng và tư duy làm việc cẩn thận, làm chủ sản phẩm".
+
+⭐ **Insight**: Check-in này đánh dấu thời điểm Manager chính thức giao nhiệm vụ EKS2 (mentor Hiếu PIC) + gợi ý về Seminar. Cả 2 item này sau đó trở thành E2 KS1 và E2 KS2 trong EKS H1.
 
 ### Tháng 2 — Báo cáo W4 (02/03/2026)
 **Sản phẩm**: AI Home — tag EKS1-KS1, EKS2-KS1
@@ -134,9 +247,25 @@
 **Manager feedback (Trần Đạt, 4⭐)**:
 > Phối hợp tốt cho 4 Dev Android, chủ động push các bộ phận khác, dẫn dắt kế cận (chia sẻ mindset cho Hiếu). "Mong tương lai có nhiều bạn kế cận có tinh thần như em"
 
-### Tháng 3 — Check-in 27/03 (08/04/2026)
-- Mục tiêu EKS2: giúp Hiếu làm PIC AI Home, thực hành các trách nhiệm
-- Next: trao quyền, giao task khó, thúc đẩy Hiếu thay đổi tư duy
+### Check-in ngày 27/3/2026 *(08/04/2026 — Báo cáo tức thời)*
+
+**Những điểm phát huy**:
+- Đang làm tốt EKS1.
+
+**Những điều cần làm**: Thực hiện EKS2 — Đồng hành hỗ trợ Hiếu, với mục tiêu giúp Hiếu có thể làm PIC của sản phẩm AI Home và được thực hành PIC với các trách nhiệm:
+- Nắm bắt tiến độ của dự án
+- Chủ động trao đổi với các bên
+- Là người chịu trách nhiệm cho sản phẩm
+
+> *Mục tiêu lớn hơn là xây dựng đội ngũ kế cận mạnh, tăng cường khả năng mở rộng cho team.*
+
+**Next Step**:
+- Ngồi lại trao đổi trực tiếp với Hiếu về kỳ vọng, định hướng.
+- Giao cho Hiếu đảm nhận PIC cho phase mới của sản phẩm.
+- Chủ động đẩy các task khó cho Hiếu và yêu cầu tự giải quyết vấn đề.
+- Thúc đẩy Hiếu thay đổi tư duy, chủ động hơn trong việc đóng góp và chịu trách nhiệm cho sản phẩm.
+
+⭐ **Insight**: Check-in 27/3 là thời điểm Manager chính thức giao EKS2 KS1 (Hiếu làm PIC AI Home). Từ đây các tuần W1/4, W2/4 đều có evidence mạnh về mentor/trao quyền Hiếu — đây là backbone của E2 KS1 (100%).
 
 ### Tháng 4 — Báo cáo W1 (05/04/2026) — ⭐ 5 sao XUẤT SẮC từ Manager
 **Sản phẩm**: AI Home (release new UI), bắt đầu phase Cost Estimate
@@ -327,6 +456,24 @@ TRY & kết quả:
 2. Trước khi vào Mid-year, **chốt với DM bản IDP 2026 đã hoàn thiện** → E3 KS2 có evidence trực tiếp.
 3. Buổi tech sharing Asana automation (action item từ W3/5 Manager) — nếu ship được trước Mid-year → đóng luôn E2 KS2 (đang 0%).
 
+### Check-in ngày 20/5/2026 *(24/05/2026 — Báo cáo tức thời)*
+
+**Keep**:
+- Tự chủ và ngon lành chung khi xoay xở, làm mọi việc kể cả liên quan BE, QA, CMS để đảm bảo tiến độ dự án, không chỉ dừng ở công việc cá nhân.
+- Mentor chia sẻ cho Hiếu về mindset làm việc chuyên nghiệp, kỹ năng công việc.
+
+**Problem**:
+- Làm KMP cho AI Learn: lo lắng về khi bắt đầu công nghệ mới có thể bị chậm ở thời điểm ban đầu, cần phải thử và tối ưu → **Try**: Tách module nhiều hơn để dễ tái sử dụng.
+- IDP cần có hành vi chốt từ đầu (bị máy móc), băn khoăn khi người quản lý trực tiếp lại không phải là người đưa ra quyết định hay kỳ vọng cuối cùng → **Try**: Manager trao đổi lại với anh Trung để tối ưu.
+
+**Note** *(kết quả sau trao đổi với anh Trung)*:
+- Cột hướng dẫn hành động chỉ đơn giản là gợi ý cách làm, không có ý nghĩa là phải hoàn thành theo gợi ý đó.
+- Việt hỗ trợ lên IDP, người chốt và đánh giá là anh TrungND.
+
+⭐ **Insight**: Check-in 20/5 giải toả 2 concern lớn cho Dũng: (1) KMP không cần quá lo — tách module rõ là đủ; (2) IDP không bị ràng buộc máy móc vào từng hành vi cụ thể — người quyết định cuối là TrungND, không phải DM trực tiếp. Đây là unlock quan trọng giúp Dũng tự tin hơn khi bước vào W22 (AI Learn coding).
+
+---
+
 ### Tháng 5 W5 / Tháng 6 W1 (31/05/2026) — ⭐ Phase 1 AI Learn shipped in 1 week
 **Sản phẩm**: AI Learn (Phase 1 — Setup + Core Build) — tag E1 KS1, E2 KS1
 
@@ -493,6 +640,45 @@ Cải tiến: **"Doc-first + Client local mock"** — push BE trả doc sớm, C
 > "Anh để đánh giá 3,7 sao (Làm tốt) tiệm cận xuất sắc nhé. Phần How em đạt 4 sao và phần What tiệm cận 4 sao — cần tiến độ vượt kỳ vọng để được 4 sao phần What."
 
 ⭐ **Insight**: Rating 3.7⭐ với HOW đạt 4 sao = Manager đánh giá cao **cách làm việc** của Dũng, signal rõ để đẩy WHAT lên 4 sao chỉ cần ship nhanh hơn kỳ vọng. Với AI Learn đang ở giai đoạn integrate API thật, W25 là cơ hội để demonstrate velocity vượt kỳ vọng.
+
+---
+
+## W25 / 2026 (16/06 – 20/06) — AI Learn: Auth Flow + Practice Tab
+
+**Sản phẩm/Phase**: AI Learn — Auth Flow + Practice Tab
+
+**IKAME WHAT (KẾT QUẢ)**:
+- **AI Learn — Auth**: Hoàn thành Google Auth, Register Account, Login Account, Map Login API. Setup Google Cloud Config để triển khai auth. → E1 KS1: Auth flow sẵn sàng tích hợp API thật.
+- **AI Learn — Practice Tab**: Hoàn thành Map API + implement logic feature Practice Tab — hoàn thành cuối tuần để đón đầu BE trả nhiều API tuần tới. → E1 KS1: unblock phase tiếp theo.
+- **AI Learn — CICD**: Phát hiện thiếu config, tự điều chỉnh để đảm bảo app build được.
+- **Cross-product**: Review code các sản phẩm. → E2 KS1.
+
+**IKAME HOW (CÁCH LÀM)**:
+- Nhận thấy BE sẽ trả về nhiều API vào cuối tuần này và tuần sau — dự báo bottleneck → chủ động hoàn thành Practice Tab trong cuối tuần để khi API về là integrate ngay, không bị dồn việc.
+- Google Cloud Config chưa được tạo, block auth flow → chủ động ping anh Cường setup; sau khi thấy phản hồi chậm → xin tự vào config, không để auth flow bị block.
+- Phát hiện CICD thiếu một vài config, app không build được → tự điều chỉnh, không chờ TL assign.
+- Chủ động config Firebase Debug để phục vụ test auth.
+- Làm việc liên tục với Design để bổ sung các case UI/flow còn thiếu trong spec; hỗ trợ BE test API mới + đưa requirement client cần → giảm round sửa sau.
+
+**Các TRY trong tuần**:
+- Try 1 (Worked): Implement Google Auth với Credential Manager API → chạy thông flow Sign-in trên device thật sau khi xử lý OAuth consent screen + SHA key config.
+- Try 2 (Worked): Hoàn thành Practice Tab cuối tuần → có buffer khi BE trả API, tránh bottleneck W26.
+- Try 3 (Worked): Tự config CICD thay vì đợi TL → app build được, không block pipeline.
+
+**Level up (IKAME LEVEL UP)**:
+- **Google Auth với Credential Manager API (Android)**: nắm OAuth 2.0 flow trên Android — ID token, access token, sign-in intent, xử lý các error case (account not found, canceled, network error). Áp dụng trực tiếp vào AI Learn auth flow.
+- **LazyColumn trong Compose**: tìm hiểu cơ chế hoạt động thực sự (composition, recomposition, item recycling) → đúc kết thành nội dung, dự kiến sharing nội bộ thứ 3 tuần sau.
+- **CICD Variables config**: nắm cách setup CI/CD Variables để inject các key (signing key, API key, v.v.) vào pipeline — áp dụng trực tiếp khi fix CICD config cho AI Learn.
+- Proactive risk management: nhận biết bottleneck trước (BE trả API dồn) → hành động ngay cuối tuần thay vì chờ tới W26 bị block.
+
+**Tồn đọng & rủi ro**: BE trả về nhiều API cuối tuần này + đầu tuần sau → volume integrate W26 sẽ cao. Hướng xử lý: đã hoàn thành Practice Tab trước + có local mock sẵn → W26 chỉ cần swap API thật.
+
+**Cần hỗ trợ**: TL: Không. Manager: Không.
+
+**⭐ IDP tags**: #1 Innovation 4.6 (CICD self-fix + proactive risk approach) | #9 Ownership 4.2 | #14 Ownership 4.8 (hoàn thành Practice Tab cuối tuần chủ động) | #16 Tech R&D 4.7 (Google Auth OAuth 2.0 flow + LazyColumn internals)
+
+**Self-rating**: Làm tốt
+**Lý do**: Hoàn thành 100% Auth flow (Google Auth + Register + Login + Map API) đúng cam kết với PM (E1 KS1). Practice Tab vượt kế hoạch — nhận thấy BE sẽ trả nhiều API dồn vào cuối tuần và đầu tuần sau, chủ động dành cuối tuần hoàn thành sớm để W26 có thể integrate API thật ngay khi về, không để team bị block.
 
 
 ## Patterns observed across H1
