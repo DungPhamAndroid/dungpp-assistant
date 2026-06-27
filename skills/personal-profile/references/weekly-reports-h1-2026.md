@@ -680,6 +680,64 @@ Cải tiến: **"Doc-first + Client local mock"** — push BE trả doc sớm, C
 **Self-rating**: Làm tốt
 **Lý do**: Hoàn thành 100% Auth flow (Google Auth + Register + Login + Map API) đúng cam kết với PM (E1 KS1). Practice Tab vượt kế hoạch — nhận thấy BE sẽ trả nhiều API dồn vào cuối tuần và đầu tuần sau, chủ động dành cuối tuần hoàn thành sớm để W26 có thể integrate API thật ngay khi về, không để team bị block.
 
+---
+
+## W26 / 2026 (23/06 – 27/06) — AI Learn: AI Talk + Tab Practice + Phase Coordination + Sharing LazyColumn
+
+**Sản phẩm/Phase**: AI Learn — AI Talk + Tab Practice + Điều phối phase
+
+**IKAME WHAT (KẾT QUẢ)**:
+
+**1. Phát triển AI Learn → E1 KS1**
+- **AI Talk Feature** (toàn bộ logic):
+  - WebSocket logic: Connect, Disconnect, Event
+  - Send Text Logic, Send Hint Logic
+  - VoiceTimeline + Lip Sync Logic
+  - LlmChunk Event Logic, AudioChunk Event Logic
+  - Combine: LlmChunk + AudioChunk + VoiceTimeline
+  - TurnComplete / TurnAudio / SttResult Event Logic + Summary Logic
+  - Change Speed Logic, Replay Audio Message
+  - Limit time usage for free user + countdown logic
+- **Tab Practice Logic**
+
+**2. Điều phối phase phát triển**
+- Điều chỉnh người phụ trách các tính năng khi có bổ sung nguồn lực.
+- Nắm bắt thông tin, sắp xếp thứ tự công việc, đưa request thời gian merge dựa trên thực tế → các feature trả đúng và vượt timeline.
+- Hỗ trợ anh Thọ vào support: brief rõ cần làm gì, ghép API nào → vào việc ngay không mất ramp-up.
+- Review code team.
+- **Kết quả**: Timeline ban đầu full feature đến T4 tuần sau → thực tế dự kiến T2 — **vượt 2 ngày**, tạo buffer cho tracking, fix bug và đóng gói.
+
+**3. Tổ chức buổi sharing: "LazyColumn hoạt động thế nào?" → E2 KS2**
+- Giúp anh em dev hiểu sâu cơ chế compose/recompose, virtualization và các lưu ý tối ưu performance trong Lazy Layout.
+
+**IKAME HOW (CÁCH LÀM)**:
+- Dành 150% tâm sức và thời gian để keep timeline release mà PM đưa ra.
+- Nhận thấy API chưa được test + có nhiều lỗi → chủ động raise với PM → kéo được nguồn lực anh Thọ hỗ trợ 1/2 ngày, giảm áp lực timeline.
+- Chủ động raise các logic chưa hợp lý / còn thiếu lên Slack, cùng bàn bạc thống nhất xử lý.
+- Làm việc với BE, AI để test API + Socket; trace bug phát hiện đầu nào gây lỗi → giúp BE/AI giải quyết nhanh nhất.
+- Trong các cuộc họp chủ động đặt câu hỏi để các bên đưa ra thời gian cụ thể → giúp dev Android + các đầu align timeline tốt hơn.
+- Review code team dù timeline gấp, xử lý phần còn lại ngoài giờ để không block tiến độ anh em.
+
+**Các TRY trong tuần**:
+- Try 1 (Worked): Raise vấn đề API chưa test với PM → kéo được anh Thọ hỗ trợ 1/2 ngày, giảm áp lực timeline.
+- Try 2 (Partial): Phát hiện API lỗi do HuyBE bị mắc kẹt → chủ động kêu gọi trợ giúp, tuy nhiên chưa hiệu quả, vẫn phải đợi đến lượt từ Huy. *(Cần hỗ trợ unblock nếu kéo sang W27)*
+- Try 3 (Worked): Điều chỉnh lại timeline triển khai dựa trên thực tế → vượt 2 ngày so với cam kết ban đầu.
+
+**IKAME LEVEL UP**:
+- **WebSocket complex flow trên Android**: nắm toàn bộ vòng đời kết nối, xử lý đồng thời nhiều loại event (LlmChunk, AudioChunk, VoiceTimeline), combine stream và đồng bộ Lip Sync — áp dụng trực tiếp vào AI Talk.
+- **Public speaking & tổ chức sharing**: Lần đầu tổ chức buổi sharing bài bản — làm chủ cách triển khai, mạnh dạn đứng chia sẻ trước team, loại bỏ tâm lý ngại đứng trước đám đông.
+- Điều phối phase chủ động hơn: nhận diện bottleneck sớm (API chưa test, nguồn lực thiếu) và có action cụ thể → timeline vượt cam kết.
+- Đảm bảo chất lượng nhiều tính năng cùng lúc: vừa phát triển AI Talk (nhiều event phức tạp), vừa điều phối phase, review code, xử lý bug BE/AI trong cùng một tuần mà không drop tính năng nào.
+
+**Tồn đọng & rủi ro**: Không.
+
+**Cần hỗ trợ**: TL: Không. Manager: Hỗ trợ unblock HuyBE nếu tình trạng API stuck kéo sang tuần sau.
+
+**⭐ IDP tags**: #1 Innovation 4.6 (raise bottleneck sớm + điều phối timeline vượt kế hoạch) | #2 Innovation 4.9 (brief anh Thọ, raise với PM, kéo nguồn lực) | #5 Continuous Dev 4.3 (tổ chức sharing LazyColumn — E2 KS2) | #9 Ownership 4.2 (multi-task: AI Talk + điều phối + review + sharing cùng lúc) | #14 Ownership 4.8 (150% effort, review ngoài giờ không block anh em) | #16 Tech R&D 4.7 (WebSocket complex flow + Lip Sync)
+
+**Self-rating**: Vượt kỳ vọng
+**Lý do**: Hoàn thành toàn bộ AI Talk logic + Tab Practice đúng cam kết (E1 KS1), đồng thời điều phối phase giúp timeline vượt 2 ngày so với kế hoạch — tạo thêm buffer cho fix bug và đóng gói. Tổ chức thành công buổi tech sharing LazyColumn (E2 KS2). Duy trì review code team dù lịch gấp, xử lý ngoài giờ để không block anh em.
+
 
 ## Patterns observed across H1
 
