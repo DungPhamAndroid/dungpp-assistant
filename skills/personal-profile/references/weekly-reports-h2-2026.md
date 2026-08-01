@@ -187,3 +187,37 @@
 
 **Self-rating**: Vượt kỳ vọng / Xuất sắc (tự chọn)
 **Lý do**: Hoàn thành đủ tính năng AI Talk theo cam kết (E1 KS1), dùng AI tối ưu tốc độ triển khai tracking, chủ động quản lý rủi ro nhiều đầu mối (BI/BE/AI/QA) để giữ timeline, đồng thời mentor và review code cho Hiếu xử lý IAP SDK.
+
+---
+
+## W31 / 2026 (28/07 – 01/08) — AI Learn: Bug Fix + Refactor + Tích hợp SDK
+
+**Sản phẩm/Phase**: AI Learn — Bug Fix + Refactor + Tích hợp SDK
+
+**IKAME WHAT (KẾT QUẢ)**:
+- Fixbug Avatar.
+- Fix bug localize của Hiếu.
+- Fix Socket Error Event.
+- Fix bug Tracking.
+- Release Split Message.
+- Tích hợp SDK TikTok và Meta.
+- Refactor luồng Login + Logout + Onboarding + IAP.
+- Stream Audio Flow – Error case: xử lý dứt điểm case lỗi phát sinh — đóng luôn rủi ro tồn đọng từ tuần trước (Stream Audio chưa merge/test).
+- Fix crash Firebase (tăng free crash 99,5% → 99,91%).
+- Implement Rating Flow.
+
+**IKAME HOW (CÁCH LÀM)**:
+- Chủ động rà soát kết quả trả về từ AI, tổng hợp feedback gửi team AI để cải thiện chất lượng output.
+- Chủ động rà soát lại những phần Hiếu đã làm trước đó, clear hết bug tồn đọng thay vì để dồn sang tuần sau.
+
+**IKAME LEVEL UP**:
+- Vấn đề khó đã xử lý: Refactor đồng thời 4 luồng liên kết chặt (Login/Logout/Onboarding/IAP) — dọn sạch technical debt trước khi UA đẩy thêm user vào.
+
+**Tồn đọng & rủi ro**: Không có tồn đọng tuần này.
+
+**Cần hỗ trợ**: TL: Không. Manager: Không.
+
+**⭐ IDP tags**: #1 Innovation 4.6 (refactor luồng Login/Logout/Onboarding/IAP, dọn technical debt thay vì code đè) | #5 Continuous Dev 4.3 (rà soát + clear bug tồn đọng phần Hiếu làm trước) | #16 Tech R&D 4.7 (feedback quy trình cho team AI để cải thiện kết quả trả về) | #9 Ownership 4.2 (quản lý song song nhiều đầu việc: bug fix + refactor + tích hợp SDK + support Hiếu)
+
+**Self-rating**: Làm tốt
+**Lý do**: Dù nhiều task phát sinh làm đảo lộn timeline đặt ra đầu tuần nhưng mọi việc vẫn được xử lý triệt để.
